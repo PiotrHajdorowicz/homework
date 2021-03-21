@@ -12,12 +12,15 @@ header {
 .navigation {
   background-color: darksalmon;
   height: 13.5%;
+  color: white;
   display: block;
   position: relative;
+  text-decoration: none;
 }
 .navigation p {
   display: inline-block;
   text-align: left;
+  color: white;
   position: absolute;
   top: 50%;
   margin-left: 1%;
