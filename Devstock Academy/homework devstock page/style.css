@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  display: block;
+  height: 40%;
+  background-image: url("./assets/images/leafes.jpg");
+  background-position: center;
+}
+.navigation {
+  background-color: darksalmon;
+  height: 13.5%;
+  display: block;
+  position: relative;
+}
+.navigation p {
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  margin-left: 1%;
+  transform: translateY(-125%);
+}
+.navigation nav {
+  display: inline-block;
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+}
+
+.link_form {
+  margin-left: 5%;
+}
+.banner p {
+  font-size: 26px;
+  margin-left: 5%;
+  margin-top: 3.5%;
+  font-weight: bold;
+  color: darksalmon;
+}
+main {
+  text-align: center;
+
+  margin-top: 2.5%;
+}
+main p {
+  margin-top: 2.5%;
+}
+main h2 {
+  margin-top: 1.5%;
+}
+article {
+  background-color: linen;
+  display: inline-block;
+  width: 29%;
+  margin-top: 3%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-bottom: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  transition: all 0.2s ease-in-out;
+}
+
+article:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 5%;
+  background-color: darksalmon;
+  position: relative;
+  height: 40%;
+}
+
+.about {
+  display: inline-block;
+  width: 30%;
+}
+footer p {
+  display: inline-block;
+}
+footer form {
+  display: inline-block;
+  width: 30%;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+}
+form p,
+label,
+input,
+button {
+  margin-left: 5%;
+  margin-top: 2.5%;
+  display: block;
+}
+#rememberMe {
+  display: inline-block;
+}
+#Label_toRemember {
+  display: inline-block;
+  margin-left: 0%;
+}
+.logo {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo img {
+  display: inline-block;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 4%;
+}
+.about_p {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5%;
+}
+.about p {
+  margin-left: 5%;
+}
+.navigation p:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 1.5;
+  cursor: pointer;
+}
