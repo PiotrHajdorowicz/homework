@@ -12,10 +12,8 @@ header {
 .navigation {
   background-color: darksalmon;
   height: 13.5%;
-  color: white;
   display: block;
   position: relative;
-  text-decoration: none;
 }
 .navigation p {
   display: inline-block;
@@ -33,6 +31,10 @@ header {
   top: 50%;
   right: 8%;
   transform: translateY(-50%);
+}
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
 .link_form {
