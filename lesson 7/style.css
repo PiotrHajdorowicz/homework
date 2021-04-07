@@ -15,11 +15,13 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 0px 0px 7px rgba(100, 96, 106, 0.2);
+  overflow: hidden;
 }
 
 .form_wrapper {
   padding: 10px 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .image_model {
@@ -86,8 +88,8 @@ input {
 }
 
 .agree div {
-  margin-top: 2%;
   margin-left: 5px;
+  font-weight: bold;
 }
 
 input[type="checkbox"] {
@@ -101,12 +103,17 @@ button {
   border-radius: 7px;
   background-color: #413fb5;
   border: 1px solid violet;
-  margin-top: 4%;
+  margin-top: 6%;
   box-shadow: 0px 0px 7px rgba(100, 96, 106, 0.2);
   color: white;
+  font-weight: bold;
+}
+.terms {
+  margin-top: 3%;
 }
 .sign_in {
-  margin-top: 4%;
+  margin-top: 6%;
+  margin-bottom: 4%;
 }
 a {
   text-decoration: none;
