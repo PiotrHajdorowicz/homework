@@ -108,25 +108,25 @@ function hello(a, b) {
 hello("Hello,", "how are you?");
 
 //g
-function multiple_task1(a, b) {
+function multipleTask1(a, b) {
   const result = a * b;
   console.log(result);
 }
-multiple_task1(5, 60);
+multipleTask1(5, 60);
 
 //h
-function multiple_task2(a, b) {
+function multipleTask2(a, b) {
   const result = a * b;
   console.log(result);
 }
-multiple_task2(3, 3600);
+multipleTask2(3, 3600);
 
 //i
-function its_Complicated(a, b, c) {
+function itsComplicated(a, b, c) {
   const result = (a * b) / c;
   console.log(result);
 }
-its_Complicated(10, 9, 2);
+itsComplicated(10, 9, 2);
 
 //j
 function minus(a, b) {
@@ -156,14 +156,14 @@ let test_G = [3, "Nissan", true];
 console.log(test_G.length);
 
 //h
-let another_empty = [];
-another_empty.push("Geforce_3080_Ti");
-console.log(another_empty);
+let anotherEmpty = [];
+anotherEmpty.push("Geforce_3080_Ti");
+console.log(anotherEmpty);
 
 //Part9
 
 //a
-let empty_Object = {};
+let emptyObject = {};
 
 //b
 let person = {
