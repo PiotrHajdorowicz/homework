@@ -30,8 +30,8 @@ console.log(sumAd3);
 
 //ad5
 //Zgodnie z tym co mówił Bartek na live (o ile dobrze zrozumiałem) i tym co napisałem wyżej w ad.4, w takim wypadku pierwszym
-//"prawdziwym" elementem tablicy będzie index numerowany jako 1. Gdyby nie dodawać wartości początkowej do tablicy, pierwszym elementem będzie
-//typowo indeks o wartości 0, tak jak zazwyczaj.
+//"prawdziwym" elementem tablicy będzie index numerowany jako 1. Gdyby nie dodawać wartości początkowej do tablicy, pierwszym element będzie akumulatorem,
+//od drugiego zacznie się iteracja (drugi będzie traktowany jako pierwszy).
 //Krótko mówiąc, indeksy po dodaniu initialValue bezpośrednio w tablicy przestawią się, ulegając zmianie.
 //Tak przynajmniej podpowiada mi mój umysł :P
 
