@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.descr {
+  display: flex;
+  justify-content: center;
+}
+
+.renderedList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.character {
+  box-sizing: border-box;
+  width: 40%;
+  list-style: none;
+}
