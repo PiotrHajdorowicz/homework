@@ -7,19 +7,24 @@
     <title>Document</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
       <h1 class="header">Rick and Morty</h1>
       <p class="descr">
-        We have some <span id="description"></span>unique characters!
+        Mamy dokładnie <span id="description"></span> unikalnych postaci!
       </p>
-      <div id="renderList"></div>
       <div id="pagesInfo" class="navigation">
         <h4>Aktualna strona to:</h4>
         <button id="prev">Poprzednia</button>
         <button id="next">Następna</button>
       </div>
     </div>
+    <div id="renderList" class="list"></div>
   </body>
 </html>

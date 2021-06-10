@@ -1,4 +1,4 @@
-// Wqrwiony jestem, bo chciałem napisać kod po swojemu,zamiast inspirować się bartkiem, tworząc listę a nie jakieś spany
+// Wqrwiony jestem, bo chciałem napisać kod po swojemu,zamiast inspirować się Bartkiem, tworząc listę a nie jakieś spany
 //, ale nie wyszło. zmarnowałem czas który mógł pójść na stylowanie, zarywajac nockę.
 // tworzy się za dużo list ul (bo pętla z metody foreach) ale jak wyniosę ul poza funkcję to dostaje nulla przy appendchildzie przy łącznie z elementem LI i guano.
 // Daruj, ale tym razem moje ambicje mnie pokonały. Jak wróce z roboty to przerobie pewnie kompletnie na kod bartka i ostyluje.
@@ -67,20 +67,11 @@ async function main() {
   });
 
   async function renderCharacters(characters) {
-    const ul = document.createElement("ul");
-    ul.setAttribute("class", "renderedList");
-    document.getElementById("renderList").appendChild(ul);
+    let card = document.createElement("div");
+    card.setAttribute("class", "character");
+    // li.innerHTML = characters.name;
 
-    let li = document.createElement("li");
-    li.setAttribute("class", "character");
-    ul.appendChild(li);
-    li.innerHTML = characters.name;
-    let container = document.createElement("div");
-    let description = document.createElement("p");
-    description.setAttribute("class", "status");
-    description.innerHTML = characters.status;
-    container.appendChild(description);
-    li.appendChild(container);
+    listToRender.appendChild(card);
 
     let imageContainer = document.createElement("div");
 
@@ -88,7 +79,16 @@ async function main() {
     img.src = characters.image;
     img.alt = characters.alt;
     imageContainer.appendChild(img);
-    li.appendChild(imageContainer);
+    card.appendChild(imageContainer);
+    let container = document.createElement("div");
+    let name = document.createElement("h2");
+    name.innerHTML = characters.name;
+    let description = document.createElement("p");
+    container.appendChild(name);
+    description.setAttribute("class", "status");
+    description.innerHTML = characters.status;
+    container.appendChild(description);
+    card.appendChild(container);
   }
 
   createList();
