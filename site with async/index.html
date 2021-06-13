@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -20,9 +20,13 @@
         Mamy dokładnie <span id="description"></span> unikalnych postaci!
       </p>
       <div id="pagesInfo" class="navigation">
-        <h4>Aktualna strona to:</h4>
-        <button id="prev">Poprzednia</button>
-        <button id="next">Następna</button>
+        <h4>
+          Aktualny numer strony to: <span id="currentPage"></span> na
+          <span id="allPages"></span>
+        </h4>
+        <button id="prev">Poprzednia strona</button>
+        <button id="next">Następna strona</button>
+        <button class="btn-toggle">Przełącz motyw</button>
       </div>
     </div>
     <div id="renderList" class="list"></div>

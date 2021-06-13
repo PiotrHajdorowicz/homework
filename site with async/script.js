@@ -3,6 +3,7 @@
 // tworzy się za dużo list ul (bo pętla z metody foreach) ale jak wyniosę ul poza funkcję to dostaje nulla przy appendchildzie przy łącznie z elementem LI i guano.
 // Daruj, ale tym razem moje ambicje mnie pokonały. Jak wróce z roboty to przerobie pewnie kompletnie na kod bartka i ostyluje.
 
+//EDIT: Poprzypominałem sobie flexa ze stylowaniem obrazków plus czarne tło do czytania z toggle class i teraz to lepiej wygląda. Howgh!
 let page = 1;
 let info = null;
 
@@ -10,6 +11,18 @@ const listToRender = document.getElementById("renderList");
 const ul = document.getElementById("renderedList");
 const buttonPrev = document.getElementById(`prev`);
 const buttonNext = document.getElementById(`next`);
+currentPageNumber = document.getElementById("currentPage");
+allPagesNumber = document.getElementById("allPages");
+
+const btn = document.querySelector(".btn-toggle");
+
+btn.addEventListener("click", function () {
+  if (document.body.className === "") {
+    document.body.className = "dark-theme";
+  } else {
+    document.body.className = "light-theme";
+  }
+});
 
 async function main() {
   async function downloadData() {
@@ -28,13 +41,18 @@ async function main() {
   downloadData().then((element) => {
     const charInfo = document.getElementById("description");
     charInfo.innerHTML = element.info.count;
+    //Tutaj task podstawowy z 10 postaciami w konsoli.
+    const onlyArrayWithCharacters = element.results;
+    currentPageNumber.innerText = page;
+    const newArray = onlyArrayWithCharacters.filter((char) => char.id < 11);
+    console.log("nowa tablica", newArray);
   });
 
   async function createList() {
     const characters = await downloadData();
     info = characters.info;
     listToRender.innerHTML = "";
-
+    allPagesNumber.innerHTML = characters.info.pages;
     characters.results.forEach((person) => renderCharacters(person));
   }
 
@@ -69,12 +87,11 @@ async function main() {
   async function renderCharacters(characters) {
     let card = document.createElement("div");
     card.setAttribute("class", "character");
-    // li.innerHTML = characters.name;
 
     listToRender.appendChild(card);
 
     let imageContainer = document.createElement("div");
-
+    imageContainer.setAttribute("class", "image");
     let img = document.createElement("img");
     img.src = characters.image;
     img.alt = characters.alt;
@@ -85,7 +102,7 @@ async function main() {
     name.innerHTML = characters.name;
     let description = document.createElement("p");
     container.appendChild(name);
-    description.setAttribute("class", "status");
+    container.setAttribute("class", "status");
     description.innerHTML = characters.status;
     container.appendChild(description);
     card.appendChild(container);
