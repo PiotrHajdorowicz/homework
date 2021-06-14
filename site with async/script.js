@@ -8,22 +8,21 @@ let page = 1;
 let info = null;
 
 const listToRender = document.getElementById("renderList");
-const ul = document.getElementById("renderedList");
 const buttonPrev = document.getElementById(`prev`);
 const buttonNext = document.getElementById(`next`);
-currentPageNumber = document.getElementById("currentPage");
-allPagesNumber = document.getElementById("allPages");
+const currentPageNumber = document.getElementById("currentPage");
+const allPagesNumber = document.getElementById("allPages");
 
 const btn = document.querySelector(".btn-toggle");
 
-btn.addEventListener("click", function () {
-  if (document.body.className === "") {
+btn.addEventListener("click", switchButton);
+function switchButton() {
+  if (document.body.className === "light-theme") {
     document.body.className = "dark-theme";
   } else {
     document.body.className = "light-theme";
   }
-});
-
+}
 async function main() {
   async function downloadData() {
     //Taką budowę w necie widziałem :D
