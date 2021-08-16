@@ -2,12 +2,15 @@ html,
 body {
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 header {
   display: block;
   height: 40%;
   background-image: url("./assets/images/leafes.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .navigation {
   background-color: darksalmon;
@@ -149,3 +152,5 @@ button:hover {
   opacity: 1.5;
   cursor: pointer;
 }
+/* Pisane i testowane na laptopie w rozdzielczości 1366 x 768, z responsywnością poczekam do kolejnych lekcji ;) 
+Użyłem natomiast gdzie się dało pod tym kątem wartości wyrażonych w procentach, do których już się przyzwyczaiłem. Jakby co, u mnie działa i wygląda jak na obrazku */
