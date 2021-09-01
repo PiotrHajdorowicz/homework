@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./App.css";
 import Heading from "./Heading";
 import Nav from "./Nav";
@@ -7,6 +7,10 @@ import Main from "./Main";
 import About from "./pages/About";
 import Counter from "./pages/Counter";
 import Stoper from "./pages/Stoper";
+import Characters from "./pages/Characters";
+import Details from "./Details";
+import Regsitration from "./pages/Registration";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -17,6 +21,7 @@ function App() {
           <Heading />
         </header>
       </div>
+
       <Switch>
         <Route exact path="/">
           <Main />
@@ -30,6 +35,16 @@ function App() {
         <Route path="/pages/Stoper">
           <Stoper />
         </Route>
+        <Route path="/pages/Characters">
+          <Characters />
+        </Route>
+        <Route path="/pages/Registration">
+          <Regsitration />
+        </Route>
+        <Route path="/pages/Login">
+          <Login />
+        </Route>
+        <Route path="/Details/:id" render={(props) => <Details {...props} />} />
       </Switch>
     </Router>
   );

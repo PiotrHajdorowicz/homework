@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 
 const Wrapper = styled.div`
 display: flex;
@@ -56,6 +57,34 @@ function Stoper() {
           }}
         >
           Zresetuj
+        </button>
+        <button
+          onClick={() => {
+            setTime((prevTime) => prevTime + 60000);
+          }}
+        >
+          Dodaj minutę
+        </button>
+        <button
+          onClick={() => {
+            setTime((prevTime) => prevTime - 60000);
+          }}
+        >
+          Odejmij minutę
+        </button>
+        <button
+          onClick={() => {
+            setTime((prevTime) => prevTime + 1000);
+          }}
+        >
+          Dodaj sekundę
+        </button>
+        <button
+          onClick={() => {
+            setTime((prevTime) => prevTime - 1000);
+          }}
+        >
+          Odejmij sekundę
         </button>
       </div>
     </Wrapper>

@@ -126,21 +126,23 @@ function Nav() {
         </ListElement>
         <ListElement>
           <NavigationButton
-            href="#characters"
+            to="/pages/Characters"
             title="Wyświetl dostępne postacie"
           >
             Lista postaci
           </NavigationButton>
         </ListElement>
         <ListElement>
-          <NavigationButton href="#registration" title="Zarejestruj się">
+          <NavigationButton to="/pages/Registration" title="Zarejestruj się">
             Rejestracja
           </NavigationButton>
         </ListElement>
         <ListElement>
-          <NavigationButton href="login" title="Zaloguj się">
+          <NavigationButton to="/pages/Login" title="Zaloguj się">
             Logowanie
           </NavigationButton>
+        </ListElement>
+        <ListElement>
           <Hamburger>
             <span />
             <span />

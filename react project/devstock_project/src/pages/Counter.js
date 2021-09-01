@@ -33,13 +33,21 @@ line-height: 1.5;
 font-size: 15px;
 `;
 
+const Screen = styled.p`
+  color: green;
+`;
+
 function Counter() {
   const [number, SetCount] = useState(0);
 
   return (
     <Container>
       <Monitor>
-        <p>Licznik: {number}</p>
+        {number % 5 === 0 && number !== 0 ? (
+          <Screen>Licznik: {number}</Screen>
+        ) : (
+          <p>Licznik: {number}</p>
+        )}
       </Monitor>
       <button onClick={() => SetCount(number + 1)}>Zwiększ o 1</button>
       <button onClick={() => SetCount(number - 1)}>Zmniejsz o 1</button>
